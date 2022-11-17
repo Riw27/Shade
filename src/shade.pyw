@@ -13,7 +13,7 @@ def setup():
             file.write('{}')
     
     with open(file=f'{os.path.expanduser("~")}\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\Shade.bat', mode='w', encoding='utf-8') as file:
-        file.write(f'@echo off\ncd {sys.argv[0].replace(os.path.basename(sys.argv[0]), "")}\nstart /low {os.path.basename(sys.argv[0])}\nexit')
+        file.write(f'@echo off\nstart /low {sys.argv[0]}\nexit')
 
     with open(file=f'{os.path.expanduser(path="~")}\AppData\Roaming\.Shade\config.json', mode='r', encoding='utf-8') as file:
         data=dict(json.load(fp=file))
