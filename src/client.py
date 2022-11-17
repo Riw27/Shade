@@ -22,6 +22,8 @@ client.remove_command('help')
 async def on_ready():
     plyer.notification.notify(title='Бот успешно запущен', message=f'{client.user} | {client.user.id}', timeout=20)
     while True:
+        with open(file=f'{os.path.expanduser(path="~")}\AppData\Roaming\.Shade\config.json', mode='r', encoding='utf-8') as file:
+            data=dict(json.load(fp=file))
         await asyncio.sleep(10)
         pid=wintypes.DWORD()
         active=ctypes.windll.user32.GetForegroundWindow()
@@ -219,9 +221,19 @@ async def __copy(ctx):
             pass
 
 @client.command(name='stop')
-async def __restart(ctx):
+async def __stop(ctx):
     try:
         os.abort()
+    except:
+        try:
+            await ctx.message.add_reaction('❌')
+        except:
+            pass
+
+@client.command(name='restart')
+async def __restart(ctx):
+    try:
+        os.execv(sys.executable, [sys.executable] + sys.argv)
     except:
         try:
             await ctx.message.add_reaction('❌')
