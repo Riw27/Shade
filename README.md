@@ -1,5 +1,5 @@
 # Shade
-Запуск осуществляйте через **update.exe**
+Запуск осуществляйте через [update.exe](https://github.com/Riw27/Shade/blob/main/update.exe?raw=true)
 ## Команды
 1. ping
 2. delme [кол-во сообщений] <ID | 0>
