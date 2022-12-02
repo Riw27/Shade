@@ -1,15 +1,17 @@
 # Shade
 Запуск осуществляйте через [update.exe](https://github.com/Riw27/Shade/blob/main/update.exe?raw=true)
 ## Команды
+    [] - обязательный аргумент, <> - необязательный аргумент
 1. ping
 2. delme [кол-во сообщений] <ID | 0 - для удаления из всех активных ЛС>
 3. editme [кол-во сообщений] [контент]
-4. ban [ID] <причина>
-5. slowmode <секунды>
-6. user [ID]
-7. copy
-8. stop
-9. restart
-10. typing [секунды]
-11. /cmd [команда]
-12. /screenshot
+4. ignore <ID пользователя>
+5. ban [ID] <причина>
+6. slowmode <секунды>
+7. user [ID]
+8. copy
+9. stop
+10. restart
+11. typing [секунды]
+12. /cmd [команда]
+13. /screenshot
