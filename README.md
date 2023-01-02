@@ -9,7 +9,7 @@
 5. ban [ID] <причина>
 6. slowmode <секунды>
 7. user [ID]
-8. copy
+8. copy <ID>
 9. stop
 10. restart
 11. typing [секунды]
